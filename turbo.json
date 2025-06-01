@@ -18,6 +18,8 @@
       "persistent": true
     },
     "test": {},
+    "test:coverage": {},
+    "test:ci": {},
     "test:watch": {
       "cache": false,
       "persistent": true
