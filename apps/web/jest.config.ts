@@ -3,16 +3,16 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type {Config} from 'jest';
-import nextJest from 'next/jest.js'
+import type { Config } from "jest";
+import nextJest from "next/jest.js";
 
 const createJestConfig = nextJest({
   // Provide the path to your Next.js app to load next.config.js and .env files in your test environment
-  dir: './',
-})
+  dir: "./",
+});
 
 const config: Config = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"],
   // All imported modules in your tests should be mocked automatically
   // automock: false,
 
@@ -30,15 +30,15 @@ const config: Config = {
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   collectCoverageFrom: [
-    'components/**/*.{js,jsx,ts,tsx}',
-    'pages/**/*.{js,jsx,ts,tsx}',
-    'lib/**/*.{js,jsx,ts,tsx}',
-    'utils/**/*.{js,jsx,ts,tsx}',
-    '!**/*.d.ts',
-    '!**/node_modules/**',
-    '!pages/_app.tsx',
-    '!pages/_document.tsx',
-    '!pages/api/**',
+    "components/**/*.{js,jsx,ts,tsx}",
+    "pages/**/*.{js,jsx,ts,tsx}",
+    "lib/**/*.{js,jsx,ts,tsx}",
+    "utils/**/*.{js,jsx,ts,tsx}",
+    "!**/*.d.ts",
+    "!**/node_modules/**",
+    "!pages/_app.tsx",
+    "!pages/_document.tsx",
+    "!pages/api/**",
   ],
 
   // The directory where Jest should output its coverage files
@@ -53,9 +53,7 @@ const config: Config = {
   coverageProvider: "v8",
 
   // A list of reporter names that Jest uses when writing coverage reports
-  coverageReporters: [
-    'text', 'lcov', 'html'
-  ],
+  coverageReporters: ["text", "lcov", "html"],
 
   // An object that configures minimum threshold enforcement for coverage results
   coverageThreshold: {
