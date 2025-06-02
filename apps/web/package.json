@@ -17,9 +17,11 @@
   },
   "dependencies": {
     "@repo/ui": "workspace:*",
+    "i18next": "^25.2.1",
     "next": "^15.3.0",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-i18next": "^15.5.2"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
