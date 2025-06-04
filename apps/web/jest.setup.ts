@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { type Attributes } from 'react';
 import '@testing-library/jest-dom';
 
 // Mock next/router
@@ -27,7 +27,7 @@ jest.mock('next/router', () => ({
 // Mock next/image
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: (props: any) => {
+  default: (props: Attributes) => {
     // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
     return React.createElement('img', props);
   },

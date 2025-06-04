@@ -1,8 +1,6 @@
-import { useTranslation } from 'react-i18next';
-import classes from './Hero.module.css';
+import classes from './hero.module.css';
 
 export default function Hero() {
-  const { t } = useTranslation();
   return (
     <section className={classes.container}>
       <div className={classes.hero}>

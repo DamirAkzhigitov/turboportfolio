@@ -31,4 +31,4 @@ const config: Config = {
   testEnvironment: 'jsdom',
 };
 
-export default createJestConfig(config) as any;
+export default createJestConfig(config) as unknown;
