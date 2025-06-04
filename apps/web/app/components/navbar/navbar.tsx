@@ -1,6 +1,6 @@
 import SvgBars from '../icons/bars';
+import NavbarLink from './navbar-link';
 import classes from './navbar.module.css';
-import NavbarLink from './navbarLink';
 
 export default function Navbar() {
   const links = [
