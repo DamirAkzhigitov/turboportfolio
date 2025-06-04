@@ -3,7 +3,9 @@ import { Raleway } from 'next/font/google';
 import './globals.css';
 import './plugins/i18n';
 
-const raleway = Raleway();
+const raleway = Raleway({
+  subsets: ['latin'],
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
