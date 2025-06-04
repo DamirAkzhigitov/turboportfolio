@@ -30,3 +30,19 @@
   max-width: 500px;
   text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+  .hero {
+    align-items: flex-start;
+  }
+  .container {
+    background: radial-gradient(
+      100% 50% at 50% 0%,
+      #003b63 0%,
+      rgb(5, 5, 5) 100%
+    );
+  }
+  .description {
+    text-align: left;
+  }
+}

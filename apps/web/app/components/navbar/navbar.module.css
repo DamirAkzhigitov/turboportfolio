@@ -22,9 +22,24 @@
   cursor: pointer;
   font-weight: 700;
   color: #bfbfbf;
-  transition: 0.3s;
+  transition: all .35s ease-in-out;
 }
 .navListItem:hover {
   font-weight: 700;
   color: #ffffff;
+}
+
+.activator {
+  display: none;
+  height: 100%;
+  padding: 10px 30px;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .activator {
+    display: flex;
+  }
+  .navList {
+    display: none;
+  }
 }

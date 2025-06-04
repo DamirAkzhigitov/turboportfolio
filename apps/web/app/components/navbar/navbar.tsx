@@ -1,3 +1,4 @@
+import SvgBars from '../icons/bars';
 import classes from './navbar.module.css';
 import NavbarLink from './navbarLink';
 
@@ -23,6 +24,10 @@ export default function Navbar() {
 
   return (
     <nav className={classes.navbar} aria-label="Main navigation">
+      <li className={classes.activator}>
+        <SvgBars />
+      </li>
+
       <ul className={classes.navList}>
         {links.map((link) => (
           <li className={classes.navListItem} key={link.label}>
