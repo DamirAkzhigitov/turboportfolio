@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Hero from '../../app/components/hero';
+import Hero from '../../app/components/hero/hero';
 import '@testing-library/jest-dom';
 
 describe('Hero Component', () => {
