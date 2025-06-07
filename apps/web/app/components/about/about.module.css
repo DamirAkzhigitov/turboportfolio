@@ -1,0 +1,60 @@
+.container {
+  background-color: rgb(5, 5, 5);
+  display: flex;
+  height: 100vh;
+  flex-flow: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  padding: 0 72px;
+  width: 100%;
+}
+
+.subtitle {
+  background: -webkit-linear-gradient(45deg, #c9faff, #0054ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.title {
+  font-size: 48px;
+}
+
+.description {
+  color: #e1e1e1;
+  max-width: 700px;
+  line-height: 1.5;
+  letter-spacing: 0.4px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+.vue {
+  background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.react {
+  color: rgb(88, 196, 220);
+}
+.icon {
+  margin-right: 5px;
+}
+
+.connect {
+  font-weight: 500;
+  color: #0a66c2;
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 0 32px;
+  }
+  .description {
+    max-width: 350px;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+  }
+}
