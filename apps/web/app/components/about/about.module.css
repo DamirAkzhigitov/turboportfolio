@@ -11,12 +11,6 @@
   width: 100%;
 }
 
-@media (max-width: 800px) {
-  .container {
-    padding: 0 32px;
-  }
-}
-
 .subtitle {
   background: -webkit-linear-gradient(45deg, #c9faff, #0054ff);
   -webkit-background-clip: text;
@@ -52,4 +46,15 @@
 .connect {
   font-weight: 500;
   color: #0a66c2;
+}
+
+@media (max-width: 800px) {
+  .container {
+    padding: 0 32px;
+  }
+  .description {
+    max-width: 350px;
+    font-size: 18px;
+    letter-spacing: 0.3px;
+  }
 }

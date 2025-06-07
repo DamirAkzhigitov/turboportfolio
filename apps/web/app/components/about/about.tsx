@@ -10,10 +10,8 @@ export default function About() {
       <h2 className={classes.title}>Hi there!</h2>
       <p className={classes.description}>
         I’m <strong>Frontend developer</strong> with a passion for user
-        experience and clean,
-        <br />
-        scalable code. Since 2018, I’ve been building responsive, accessible web
-        applications using modern frameworks like{' '}
+        experience and clean, scalable code. Since 2018, I’ve been building
+        responsive, accessible web applications using modern frameworks like{' '}
         <IReact className={classes.icon} />
         <strong>React</strong> and <IVue className={classes.icon} />
         <strong className={classes.vue}>Vue.js</strong>, with a strong focus on
