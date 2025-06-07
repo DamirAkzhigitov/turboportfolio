@@ -40,4 +40,19 @@ describe('NavbarLink', () => {
     expect(navbarLink).toBeInTheDocument();
     expect(navbarLink).toHaveClass('is-active');
   });
+  it('Should be not active if current pathname is different', () => {
+    mockUsePathname.mockImplementation(() => '/');
+
+    const link = {
+      label: 'Home',
+      to: '/about',
+    };
+
+    render(<NavbarLink link={link} />);
+
+    const navbarLink = screen.getByRole('link');
+
+    expect(navbarLink).toBeInTheDocument();
+    expect(navbarLink.classList.contains('is-active')).toBeFalsy();
+  });
 });
