@@ -1,0 +1,40 @@
+import SvgBars from '../icons/bars';
+import NavbarLink from './navbar-link';
+import classes from './navbar.module.css';
+
+export default function Navbar() {
+  const links = [
+    {
+      to: '/',
+      label: 'Home',
+    },
+    {
+      to: '/resume',
+      label: 'Resume',
+    },
+    {
+      to: '/contact',
+      label: 'Contact',
+    },
+    {
+      to: '/work',
+      label: 'Work',
+    },
+  ];
+
+  return (
+    <nav className={classes.navbar} aria-label="Main navigation">
+      <li className={classes.activator}>
+        <SvgBars />
+      </li>
+
+      <ul className={classes.navList}>
+        {links.map((link) => (
+          <li className={classes.navListItem} key={link.label}>
+            <NavbarLink link={link} />
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}
