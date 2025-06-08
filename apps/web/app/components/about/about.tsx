@@ -1,5 +1,6 @@
 'use client';
 
+import { useScroll, useSpring } from 'motion/react';
 import IReact from '../icons/react';
 import ITs from '../icons/typescript';
 import IVue from '../icons/vue';
@@ -13,6 +14,9 @@ const transition = (delay: number) => ({
 });
 
 export default function About() {
+  const { scrollYProgress } = useScroll();
+  const scaleX = useSpring(scrollYProgress);
+
   return (
     <section className={classes.container}>
       <motion.h3
@@ -59,6 +63,10 @@ export default function About() {
           Let's Connect
         </a>
       </div>
+      <motion.div
+        className={classes['container-overlay']}
+        style={{ opacity: scaleX }}
+      />
     </section>
   );
 }
