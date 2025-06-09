@@ -1,7 +1,10 @@
+import IDownload from '../components/icons/download';
+import CardBlocks from './card-blocks';
 import classes from './page.module.css';
+import type { ResumeIItem } from './types';
 
 export default function ResumePage() {
-  const list = [
+  const list: ResumeIItem[][] = [
     [
       { text: 'Fintech', type: 'bold' },
       'payments, invoicing, investing, and saving in enterprise-level',
@@ -33,7 +36,10 @@ export default function ResumePage() {
         <div className={classes.header}>
           <h1 className={classes['header-title']}>Resume</h1>
           <button className={classes['header-button']} type="button">
-            Download as PDF
+            <IDownload className={classes['header-button__icon']} />
+            <span className={classes['header-button__text']}>
+              Download as PDF
+            </span>
           </button>
         </div>
       </header>
@@ -44,24 +50,7 @@ export default function ResumePage() {
             development:
           </h3>
           <div className={classes['card-content']}>
-            <ul className={classes['card-content__blocks']}>
-              {list.map((item, index) => (
-                <li
-                  className={classes['card-content__blocks-item']}
-                  key={index}
-                >
-                  {item.map((block, i) =>
-                    typeof block === 'string' ? (
-                      <span key={i}>{block}</span>
-                    ) : (
-                      <span key={i} className={classes['block--bold']}>
-                        {block.text}
-                      </span>
-                    )
-                  )}
-                </li>
-              ))}
-            </ul>
+            <CardBlocks list={list} />
           </div>
         </div>
       </div>
