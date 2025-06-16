@@ -1,4 +1,4 @@
-import IDownload from '../components/icons/download';
+import IDownload from '@/components/icons/download';
 import CardBlocks from './card-blocks';
 import classes from './page.module.scss';
 import sharedClasses from './shared.module.scss';
