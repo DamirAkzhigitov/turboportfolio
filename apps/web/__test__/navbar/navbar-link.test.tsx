@@ -1,5 +1,5 @@
+import NavbarLink from '@/components/navbar/navbar-link';
 import { render, screen } from '@testing-library/react';
-import NavbarLink from '../../app/components/navbar/navbar-link';
 
 const mockUsePathname = jest.fn();
 

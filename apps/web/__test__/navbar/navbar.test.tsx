@@ -1,8 +1,8 @@
-import Navbar from '../../app/components/navbar/navbar';
+import Navbar from '@/components/navbar/navbar';
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/react';
 
-jest.mock('../../app/components/navbar/navbar-link', () => {
+jest.mock('@/components/navbar/navbar-link', () => {
   return ({ link }: { link: { label: string } }) => {
     return <span>{link.label}</span>;
   };
