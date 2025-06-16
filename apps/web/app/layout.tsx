@@ -1,11 +1,19 @@
+import Navbar from '@/components/navbar/navbar';
+import { Providers } from '@/components/providers';
 import type { Metadata } from 'next';
 import { Raleway } from 'next/font/google';
-import Navbar from './components/navbar/navbar';
+import '@repo/ui/globals.css';
 import './globals.css';
 
-const raleway = Raleway({
+const ralewaySans = Raleway({
   subsets: ['latin'],
+  variable: '--font-sans',
 });
+
+// const ralewayMono = Raleway({
+//   subsets: ['latin'],
+//   variable: '--font-mono',
+// });
 
 export const metadata: Metadata = {
   title: 'Damir Akzhigitov — Frontend Developer',
@@ -19,12 +27,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${raleway.className}`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${ralewaySans.variable} font-sans antialiased`}>
         <header>
           <Navbar />
         </header>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
