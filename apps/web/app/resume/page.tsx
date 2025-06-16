@@ -1,6 +1,7 @@
 import IDownload from '../components/icons/download';
 import CardBlocks from './card-blocks';
-import classes from './page.module.css';
+import classes from './page.module.scss';
+import sharedClasses from './shared.module.scss';
 import type { ResumeIItem } from './types';
 
 export default function ResumePage() {
@@ -32,12 +33,12 @@ export default function ResumePage() {
 
   return (
     <section>
-      <header className={classes['header-wrapper']}>
-        <div className={classes.header}>
-          <h1 className={classes['header-title']}>Resume</h1>
-          <button className={classes['header-button']} type="button">
-            <IDownload className={classes['header-button__icon']} />
-            <span className={classes['header-button__text']}>
+      <header className={classes.header}>
+        <div className={classes.header__wrapper}>
+          <h1 className={classes.header__title}>Resume</h1>
+          <button className={classes.header__button} type="button">
+            <IDownload className={classes['header__button-icon']} />
+            <span className={classes['header__button-text']}>
               Download as PDF
             </span>
           </button>
@@ -49,7 +50,7 @@ export default function ResumePage() {
             I’ve been in various industries and domains working with
             development:
           </h3>
-          <div className={classes['card-content']}>
+          <div className={sharedClasses['card-content']}>
             <CardBlocks list={list} />
           </div>
         </div>

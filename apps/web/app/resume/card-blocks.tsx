@@ -1,7 +1,7 @@
 'use client';
 
 import * as motion from 'motion/react-client';
-import classes from './page.module.css';
+import sharedClasses from './shared.module.scss';
 import type { ResumeIItem } from './types';
 
 export default function CardBlocks({ list }: { list: ResumeIItem[][] }) {
@@ -15,21 +15,21 @@ export default function CardBlocks({ list }: { list: ResumeIItem[][] }) {
   };
 
   return (
-    <ul className={classes['card-content__blocks']}>
+    <ul className={sharedClasses['card-content__blocks']}>
       {list.map((item, index) => (
         <motion.li
           custom={index}
           variants={variants}
           initial="hidden"
           animate="visible"
-          className={classes['card-content__blocks-item']}
+          className={sharedClasses['card-content__blocks-item']}
           key={index}
         >
           {item.map((block, i) =>
             typeof block === 'string' ? (
               <span key={i}>{block}</span>
             ) : (
-              <span key={i} className={classes['block--bold']}>
+              <span key={i} className={sharedClasses['block--bold']}>
                 {block.text}
               </span>
             )
