@@ -1,11 +1,12 @@
 'use client';
 
+import type { Variants } from 'motion/react';
 import * as motion from 'motion/react-client';
 import sharedClasses from './shared.module.scss';
 import type { ResumeIItem } from './types';
 
 export default function CardBlocks({ list }: { list: ResumeIItem[][] }) {
-  const variants = {
+  const variants: Variants = {
     hidden: { opacity: 0, transform: 'translateY(100px)' },
     visible: (index: number) => ({
       transform: 'translateY(0px)',
