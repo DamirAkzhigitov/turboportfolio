@@ -13,6 +13,10 @@
       grid-template-columns: repeat(3, 1fr);
       list-style: none;
       gap: 16px;
+      &--list {
+        display: flex;
+        flex-flow: column;
+      }
     }
     &__blocks-item {
       padding: 32px;

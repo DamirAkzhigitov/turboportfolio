@@ -1,6 +1,7 @@
 import CardBlocks from '@/app/resume/components/CardBlocks';
 import PdfDownload from '@/app/resume/components/PdfDownload';
 import ResumeDocument from '@/app/resume/components/ResumeDocument';
+import WorkPlaces from '@/app/resume/components/WorkPlaces';
 import classes from './page.module.scss';
 import sharedClasses from './shared.module.scss';
 import type { ResumeIItem } from './types';
@@ -109,7 +110,7 @@ export default function ResumePage() {
           I’ve worked as a senior Frontend engineer for:
         </h3>
         <div className={sharedClasses['card-content']}>
-          {/*<CardBlocks items={workHistory} />*/}
+          <WorkPlaces items={workHistory} />
         </div>
       </div>
     );
