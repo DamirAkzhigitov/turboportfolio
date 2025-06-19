@@ -12,14 +12,14 @@ export default function Navbar() {
       to: '/resume',
       label: 'Resume',
     },
-    {
-      to: '/contact',
-      label: 'Contact',
-    },
-    {
-      to: '/work',
-      label: 'Work',
-    },
+    // {
+    //   to: '/contact',
+    //   label: 'Contact',
+    // },
+    // {
+    //   to: '/work',
+    //   label: 'Work',
+    // },
   ];
 
   return (

@@ -1,7 +1,7 @@
 import Navbar from '@/components/navbar/navbar';
 import { Providers } from '@/components/providers';
 import type { Metadata } from 'next';
-import { Raleway } from 'next/font/google';
+import { Raleway, Roboto_Mono } from 'next/font/google';
 import '@repo/ui/globals.css';
 import './globals.css';
 
@@ -10,10 +10,10 @@ const ralewaySans = Raleway({
   variable: '--font-sans',
 });
 
-// const ralewayMono = Raleway({
-//   subsets: ['latin'],
-//   variable: '--font-mono',
-// });
+const robotoMono = Roboto_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+});
 
 export const metadata: Metadata = {
   title: 'Damir Akzhigitov — Frontend Developer',
@@ -28,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${ralewaySans.variable} font-sans antialiased`}>
+      <body
+        className={`${ralewaySans.variable} ${robotoMono.variable} font-sans antialiased`}
+      >
         <header>
           <Navbar />
         </header>
