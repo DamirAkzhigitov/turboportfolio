@@ -6,7 +6,7 @@ import classes from './page.module.scss';
 import sharedClasses from './shared.module.scss';
 import type { ResumeIItem } from './types';
 
-export default function ResumePage() {
+export default async function ResumePage() {
   const list: ResumeIItem[][] = [
     [
       { text: 'Fintech', type: 'bold' },
@@ -75,6 +75,7 @@ export default function ResumePage() {
     },
   ];
   const fileName = 'Akzhigitov Damir Resume';
+
 
   function IndustriesCard() {
     return (
