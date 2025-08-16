@@ -13,7 +13,7 @@ export default function NavbarLink({
 
   return (
     <>
-      <NextLink href={link.to} className={isActive}>
+      <NextLink href={link.to} className={isActive} prefetch={false}>
         {link.label}
       </NextLink>
     </>
